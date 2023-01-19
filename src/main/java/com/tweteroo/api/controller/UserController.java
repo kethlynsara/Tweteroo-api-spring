@@ -13,7 +13,7 @@ import com.tweteroo.api.repository.UserRepository;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/sign-up")
+@RequestMapping("/api/auth/sign-up")
 public class UserController {
     
     @Autowired

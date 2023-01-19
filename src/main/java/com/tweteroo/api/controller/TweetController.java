@@ -13,7 +13,7 @@ import com.tweteroo.api.repository.TweetRepository;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/tweets")
+@RequestMapping("/api/tweets")
 public class TweetController {
 
     @Autowired
