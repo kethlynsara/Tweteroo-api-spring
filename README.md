@@ -10,11 +10,11 @@
 
 ## Features
 - Sign up 
-  - **POST** `/sign-up`
+  - **POST** `/api/auth/sign-up`
 - Tweets
-  - **GET** `/tweets`
-  - **GET** `/tweets/USERNAME`
-  - **POST** `/tweets`
+  - **GET** `/api/tweets`
+  - **GET** `/api/tweets/USERNAME`
+  - **POST** `/api/tweets`
 
 
 ## Technologies
