@@ -10,7 +10,7 @@
 
 ## Features
 - Sign up 
-  - **POST** `/signup`
+  - **POST** `/sign-up`
 - Tweets
   - **GET** `/tweets`
   - **GET** `/tweets/USERNAME`
