@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.tweteroo.api.dto.TweetDTO;
 import com.tweteroo.api.model.Tweet;
-import com.tweteroo.api.repository.TweetRepository;
+import com.tweteroo.api.service.TweetService;
 
 import jakarta.validation.Valid;
 
@@ -21,15 +21,15 @@ import jakarta.validation.Valid;
 public class TweetController {
 
     @Autowired
-    private TweetRepository repository;
+    private TweetService service;
 
     @GetMapping("/{USERNAME}") 
-    private List<Tweet> getByUsername(@PathVariable String USERNAME) {
-        return repository.findByUsername(USERNAME);
+    private List<Tweet> getByUsername(@PathVariable String username) {
+        return service.findByUsername(username);
     }
     
     @PostMapping
     public void create(@RequestBody @Valid TweetDTO req) {
-        repository.save(new Tweet(req));
+        service.save(req);
     }
 }

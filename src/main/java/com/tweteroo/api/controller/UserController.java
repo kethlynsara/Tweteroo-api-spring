@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tweteroo.api.dto.UserDTO;
-import com.tweteroo.api.model.User;
-import com.tweteroo.api.repository.UserRepository;
+import com.tweteroo.api.service.UserService;
 
 import jakarta.validation.Valid;
 
@@ -17,10 +16,10 @@ import jakarta.validation.Valid;
 public class UserController {
     
     @Autowired
-    private UserRepository repository;
+    private UserService service;
     
     @PostMapping
     public void signUp(@RequestBody @Valid UserDTO req) {
-        repository.save(new User(req));
+        service.save(req);
     }
 }
